@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>CIMSCO - Making sense of electricity consumption</title>
+    <link rel="shortcut icon" href="Images/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="Images/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="Images/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="Images/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="Images/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="Images/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16.png">
+	<link rel="apple-touch-icon" href="Images/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Images/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Images/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="Images/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="Images/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="Images/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="Images/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="Images/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="Images/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="Images/favicon-144.png">
+	<meta name="msapplication-config" content="/browserconfig.xml">
+     <link rel="stylesheet" href="cimsco.css">
+     <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <div id="header">
+        <a href="#" onclick ="show('home')"><img src="images/cimsco%20name%20only.png"></a>
+        <h3>Making sense of electricity consumption</h3>
+        <div id="navbar" class="nav">
+            <a href="#" onclick ="show('home')" id="homeLink" class="current"><strong>Home</strong></a>
+            <a href="#" onclick ="show('about')" id="aboutLink"><strong>About Us</strong></a>
+            <a href="#" onclick ="show('more')" id="moreLink"><strong>Read More</strong></a>
+            <button id="login" class="nav">Log In</button> 
+        </div>
+    </div>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="fixedwidth">
+            <div id="home">
+                <p>We help you save money and time by providing an easy-to-understand breakdown of your electricity costs. </br></br>Interested?</p>
+                <button type="button" id="contact">Contact us</button>
+            </div>
+            <div id="about">
+                <p>Cimsco are a Wellington based company with a national presence. We've been working in the electricity industry for years, and we have a great understanding of the electricity needs of large and small organisations. </p>
+                <button type="button" id="contact">Contact us</button>
+            </div>
+            <div id="more">
+                <p>We take the information contained in your electricity bill, and turn it into easy to understand graphics. This will help you make better decisions about the electricity you use, and can even help you chose a new provider when the time comes.</p>
+                <button type="button" id="contact">Contact us</button>
+            </div>
+        </div>
+    </div>
+</body>
+<foot>
+    <script type="text/javascript" language="JavaScript">
+       var currentDiv = document.getElementById("home");
+        var currentClicked = document.getElementById("homeLink");
+        
+    function show(divID) {
+        var div = document.getElementById(divID);
+        var clicked = document.getElementById(divID + "Link")
+        currentDiv.style.display = "none";
+        currentClicked.className = "";
+        div.style.display = "block";
+        clicked.className = "current";
+        currentDiv = div;
+        currentClicked = clicked;
+    }
+    </script>
+</foot>
+</html>
